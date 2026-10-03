@@ -1,0 +1,168 @@
+{
+  "nombre": "Política base - réplica hoja Caso Walmart DSCR",
+  "multiplo_max_ebitda": 3.0,
+  "indicadores": {
+    "dscr": {
+      "nombre": "DSCR (EBITDA / servicio total)",
+      "peso": 0.4,
+      "tabla": [
+        [
+          0,
+          20,
+          "Insuficiente (< 1,00)"
+        ],
+        [
+          1.0,
+          40,
+          "Ajustado (1,00 - 1,19)"
+        ],
+        [
+          1.2,
+          60,
+          "Aceptable (1,20 - 1,29)"
+        ],
+        [
+          1.3,
+          80,
+          "Bueno (1,30 - 1,49)"
+        ],
+        [
+          1.5,
+          100,
+          "Excelente (>= 1,50)"
+        ]
+      ]
+    },
+    "deuda_ebitda": {
+      "nombre": "Deuda / EBITDA (con nuevo crédito)",
+      "peso": 0.3,
+      "tabla": [
+        [
+          0,
+          100,
+          "Bajo (< 2,0x)"
+        ],
+        [
+          2.0,
+          80,
+          "Moderado (2,0 - 2,49x)"
+        ],
+        [
+          2.5,
+          60,
+          "Alto (2,5 - 2,99x)"
+        ],
+        [
+          3.0,
+          40,
+          "Muy alto (3,0 - 3,49x)"
+        ],
+        [
+          3.5,
+          20,
+          "Excesivo (>= 3,5x)"
+        ]
+      ]
+    },
+    "margen_ebitda": {
+      "nombre": "Margen EBITDA",
+      "peso": 0.15,
+      "tabla": [
+        [
+          0,
+          20,
+          "Bajo (< 5%)"
+        ],
+        [
+          0.05,
+          40,
+          "Débil (5% - 9,9%)"
+        ],
+        [
+          0.1,
+          60,
+          "Aceptable (10% - 14,9%)"
+        ],
+        [
+          0.15,
+          80,
+          "Bueno (15% - 19,9%)"
+        ],
+        [
+          0.2,
+          100,
+          "Excelente (>= 20%)"
+        ]
+      ]
+    },
+    "crecimiento": {
+      "nombre": "Crecimiento en ventas (CAGR 3 años)",
+      "peso": 0.15,
+      "tabla": [
+        [
+          -1,
+          20,
+          "Negativo (< 0%)"
+        ],
+        [
+          0,
+          40,
+          "Bajo (0% - 3,9%)"
+        ],
+        [
+          0.04,
+          60,
+          "Moderado (4% - 6,9%)"
+        ],
+        [
+          0.07,
+          80,
+          "Bueno (7% - 9,9%)"
+        ],
+        [
+          0.1,
+          100,
+          "Excelente (>= 10%)"
+        ]
+      ]
+    }
+  },
+  "escala": [
+    [
+      0,
+      "B",
+      "Rechaza"
+    ],
+    [
+      50,
+      "BB",
+      "Rechaza / requiere garantías"
+    ],
+    [
+      60,
+      "BBB",
+      "Aprueba con condiciones"
+    ],
+    [
+      70,
+      "A",
+      "Aprueba"
+    ],
+    [
+      80,
+      "AA",
+      "Aprueba"
+    ],
+    [
+      90,
+      "AAA",
+      "Aprueba sin restricciones"
+    ]
+  ],
+  "reglas_veto": {
+    "activas": false,
+    "dscr_fcl_minimo": 1.0,
+    "score_maximo_si_falla_fcl": 69,
+    "score_maximo_si_excede_capacidad": 59
+  }
+}
